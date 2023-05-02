@@ -1,0 +1,40 @@
+
+*
+  margin: 0
+  padding: 0
+  font-family: Arial, Helvetica, sans-serif
+body
+  margin: 0
+#__nuxt
+  display: grid
+  grid-template-rows: max-content 1fr
+  grid-template-columns: 1fr
+  grid-row-gap: 15px
+  justify-content: center
+  min-height: calc(100vh - 20px)
+  padding: 10px
+  background: #2c3338
+.c-container
+  width: 100%
+  max-width: 1440px
+  margin: 0 auto
+a
+  text-decoration: none
+ul
+  list-style-type: none
+
+.v-enter-active,
+.v-leave-active 
+  transition: opacity 0.5s ease
+.v-enter-from,
+.v-leave-to 
+  opacity: 0
+
+::-webkit-scrollbar 
+  width: 10px
+::-webkit-scrollbar-track
+  background: #434A52
+::-webkit-scrollbar-thumb
+  background: #3b4148
+::-webkit-scrollbar-thumb:hover
+  background: #363b41
