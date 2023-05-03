@@ -2,21 +2,28 @@
   <ul class="c-userDataList">
     <li class="c-userDataList__item">
       <span class="c-userDataList__type">Token: </span>
-      <span class="c-userDataList__value">{{ token }}</span>
+      <span class="c-userDataList__value">{{ userInfo.token }}</span>
     </li>
     <li class="c-userDataList__item">
       <span class="c-userDataList__type">ID: </span>
-      <span class="c-userDataList__value">{{ id }}</span>
+      <span class="c-userDataList__value">{{ userInfo.id }}</span>
     </li>
   </ul>
 </template>
 <script setup lang="ts">
 import UserData from "/components/Lists/UserData.vue";
 import { useStore } from "vuex";
+import { reactive } from "vue";
 
 const store = useStore();
-const { id } = store.getters["users/getUserInfo"];
-const token = store.getters["users/getTokenAuth"];
+interface UserInfo {
+  id: string;
+  token: string;
+}
+const userInfo: UserInfo = reactive({
+  id: store?.getters["users/getUserInfo"].id || '',
+  token: store?.getters["users/getTokenAuth"]  || ''
+})
 </script>
 <style scoped lang="sass">
 .c-userDataList

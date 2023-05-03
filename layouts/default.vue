@@ -11,8 +11,8 @@ import { computed } from "vue";
 import { useStore } from "vuex";
 
 const store = useStore();
-const tokenCookie: object = computed((): object => {
-  return store?.getters["users/getTokenAuth"];
+const tokenCookie: object = computed((): boolean => {
+  return store?.getters["users/getTokenAuth"] ? true : false;
 });
 </script>
 <style lang="sass">
