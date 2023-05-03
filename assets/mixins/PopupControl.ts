@@ -1,3 +1,3 @@
 export function openPopup(modal: any): void {
-  modal.open()
+  modal.open();
 }

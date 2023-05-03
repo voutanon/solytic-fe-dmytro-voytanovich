@@ -1,5 +1,5 @@
-import users from '@/store/users'
+import users from "@/store/users";
 
 export const modules = {
-  users
-}
+  users,
+};

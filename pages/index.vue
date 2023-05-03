@@ -2,11 +2,10 @@
   <SignIn />
 </template>
 <script setup lang="ts">
-import SignIn from "/components/Forms/SignIn.vue"
-    
+import SignIn from "/components/Forms/SignIn.vue";
 </script>
 <style scoped lang="sass">
-form 
+form
   height: 100%
   margin: auto
   align-items: center

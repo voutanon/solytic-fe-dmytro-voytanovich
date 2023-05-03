@@ -11,12 +11,12 @@ export const queryLoginUser = gql`
       }
     }
   }
-`
+`;
 export function variablesLoginUser(email: string, password: string): object {
   return {
-    "user": {
-      "emailAddress": email,
-      "password": password
-    }
-  } 
+    user: {
+      emailAddress: email,
+      password: password,
+    },
+  };
 }

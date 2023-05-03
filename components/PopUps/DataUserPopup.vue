@@ -7,15 +7,15 @@
   </VueFinalModal>
 </template>
 <script setup lang="ts">
-  import { VueFinalModal } from 'vue-final-modal'
-  import { useStore } from 'vuex'
-  import type { id } from '@/types/id'
+import { VueFinalModal } from "vue-final-modal";
+import { useStore } from "vuex";
+import type { id } from "@/types/id";
 
-  const store = useStore()
-  const { id: id } = store.getters["users/getUserInfo"]
+const store = useStore();
+const { id: id } = store.getters["users/getUserInfo"];
 </script>
 <style scoped lang="sass">
-  .c-userInfo
-    color: #eeeeee
-    padding: 50px
+.c-userInfo
+  color: $text-base-light
+  padding: 50px
 </style>
